@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/layout_somenthing"
+    android:padding="@dimen/activity_horizontal_margin"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.estrategiamovilmx.sales.weespareenvios.ui.fragments.PickupPointFragment">
+
+    <TextView
+        android:id="@+id/text_send_something"
+        android:layout_width="match_parent"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/gray"
+        android:text="@string/action_new_order_courier_express"
+        android:layout_height="wrap_content" />
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "280990650304",
+    "firebase_url": "https://weespare-envios.firebaseio.com",
+    "project_id": "weespare-envios",
+    "storage_bucket": "weespare-envios.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:280990650304:android:42ae70450637f91c",
+        "android_client_info": {
+          "package_name": "com.estrategiamovilmx.sales.weespareenvios"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "280990650304-m5icepjnecu77fsfd3vd3ms71lkvat06.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.estrategiamovilmx.sales.weespareenvios",
+            "certificate_hash": "3eb7aa03a726b2be1eb494ca39c10fca811c0b4d"
+          }
+        },
+        {
+          "client_id": "280990650304-kjpnd3a9fd22d882jk22lvccdlt34k04.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBy1wMa4KBPh4nqmrSmVtIR6ir3z0zfVRo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "280990650304-kjpnd3a9fd22d882jk22lvccdlt34k04.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
