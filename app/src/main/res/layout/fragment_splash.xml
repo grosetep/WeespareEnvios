@@ -5,8 +5,15 @@
                 android:id="@+id/splash_screen"
                 android:background="@drawable/gradient">
 <RelativeLayout
-    android:layout_width="match_parent" android:background="@drawable/gradient"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_height="match_parent"
+        android:src="@mipmap/splash_2"
+        android:scaleType="centerCrop"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,8 +25,8 @@
         <ImageView
             android:id="@+id/logo"
             android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:src="@mipmap/logo_completo_grande_w"
+            android:layout_height="150dp"
+            android:src="@mipmap/logo_landscape"
             android:layout_marginBottom="0dp"
             />
         <TextView

@@ -134,7 +134,7 @@ public class StartActivity extends AppCompatActivity implements DialogCallbackIn
     private void getInitialRate(){
         final Gson gson = new Gson();
         String id_country = ApplicationPreferences.getLocalStringPreference(getApplicationContext(), Constants.id_country);
-        id_country = "173";
+        id_country = "52";
         RestServiceWrapper.getInitialRate(id_country, new Callback<RatesResponse>() {
             @Override
             public void onResponse(Call<RatesResponse> call, retrofit2.Response<RatesResponse> response) {

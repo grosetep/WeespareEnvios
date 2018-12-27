@@ -20,7 +20,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="100dp"
                 android:id="@+id/logo"
-                android:src="@mipmap/logo_completo"
+                android:src="@mipmap/logo_landscape"
                 android:layout_gravity="center_horizontal"
                 android:scaleType="fitCenter"
                 />

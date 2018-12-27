@@ -22,12 +22,13 @@ public class StringOperations {
         return value;
     }
     public static String getAmountFormat(String amount){
-        int pais = 173;
+        int pais = 52;
         NumberFormat format = null;
         if (amount!=null && amount != "") {
             switch (pais) {
                 case 173:format = NumberFormat.getCurrencyInstance(new Locale("es", "PE"));break;
                 case 146:format = NumberFormat.getCurrencyInstance(new Locale("es", "MX"));break;
+                case 52:format = NumberFormat.getCurrencyInstance(new Locale("es", "CO"));break;
             }
 
             return format.format(Double.parseDouble(amount));
@@ -40,13 +41,14 @@ public class StringOperations {
 
         String id_country = ApplicationPreferences.getLocalStringPreference(ctx, Constants.id_country);
         if (id_country.isEmpty()) {
-            pais = 173;
+            pais = 52;
         }else{pais = Integer.parseInt(id_country);}
         NumberFormat format = null;
         if (amount!=null && amount != "") {
             switch (pais) {
                 case 173:format = NumberFormat.getCurrencyInstance(new Locale("es", "PE"));break;
                 case 146:format = NumberFormat.getCurrencyInstance(new Locale("es", "MX"));break;
+                case 52:format = NumberFormat.getCurrencyInstance(new Locale("es", "CO"));break;
             }
 
             return format.format(Double.parseDouble(amount));

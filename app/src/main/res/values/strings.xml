@@ -1,5 +1,5 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="app_name">inmediatoo</string>
+    <string name="app_name">Domicilios Fundación</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -13,7 +13,7 @@
     <string name="action_shipping">Entregas</string>
     <string name="action_close">Cerrar Sesión</string>
     <string name="prompt_send_something">Enviar algo</string>
-    <string name="action_new_order_courier_express">Puedes mover casi cualquier objeto de un lugar a otro en tu ciudad. Y el tamaño no es un problema.</string>
+    <string name="action_new_order_courier_express">Puedes mover casi cualquier objeto de un lugar a otro en tu ciudad. Tarifa justa por distacia.</string>
     <string name="action_init">Inicio</string>
     <string name="action_info">Como funciona</string>
 
@@ -266,12 +266,12 @@
     <string name="prompt_select_weigth">Indique peso</string>
     <string name="prompt_add_destiny">Añadir destino</string>
     <string name="prompt_del_destiny">Quitar destino</string>
-    <string name="prompt_circular_tour">Ida y vuelta</string>
+    <string name="prompt_circular_tour">Agregar regreso</string>
     <string name="prompt_error_field_required">Revise la información proporcionada</string>
     <string name="title_budget">Confirmar orden de entrega</string>
     <string name="title_total_budget">Costo de entrega:</string>
 
-    <string name="title_circular_tour">Ida y Vuelta</string>
+    <string name="title_circular_tour">Ida y vuelta</string>
     <string name="title_destinies">Destinos</string>
 
     <!-- locations-->
