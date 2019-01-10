@@ -1,14 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
-    signingConfigs {
-        config {
-            keyAlias 'weespare_envios'
-            keyPassword 'elcompayito2130'
-            storeFile file('C:/Estrategia Movil MX/producto/keystore/weespare_envios/weespare_envios.jks')
-            storePassword 'elcompayito2130'
-        }
-    }
+
     compileSdkVersion 26
     buildToolsVersion "26.0.1"
 
