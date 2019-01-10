@@ -28,17 +28,14 @@ import android.widget.TextView;
 import com.estrategiamovilmx.sales.weespareenvios.R;
 import com.estrategiamovilmx.sales.weespareenvios.items.FactorItem;
 import com.estrategiamovilmx.sales.weespareenvios.items.HelpText;
-import com.estrategiamovilmx.sales.weespareenvios.items.RateItem;
 import com.estrategiamovilmx.sales.weespareenvios.tools.ApplicationPreferences;
 import com.estrategiamovilmx.sales.weespareenvios.tools.Constants;
 import com.estrategiamovilmx.sales.weespareenvios.tools.GeneralFunctions;
 import com.estrategiamovilmx.sales.weespareenvios.tools.StringOperations;
 import com.google.gson.Gson;
-import com.scottyab.aescrypt.AESCrypt;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.

@@ -49,7 +49,7 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".ui.activities.StartActivity"
+            android:name="com.estrategiamovilmx.sales.weespareenvios.ui.activities.StartActivity"
             android:resizeableActivity="true"
             android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
@@ -59,7 +59,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.activities.MainActivity"
+            android:name="com.estrategiamovilmx.sales.weespareenvios.ui.activities.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
@@ -69,129 +69,129 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.activities.DetailPublicationActivity"
+            android:name="com.estrategiamovilmx.sales.weespareenvios.ui.activities.DetailPublicationActivity"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
-            android:name=".ui.activities.GalleryActivity"
+            android:name="com.estrategiamovilmx.sales.weespareenvios.ui.activities.GalleryActivity"
             android:theme="@style/AppTheme.Gallery" >
         </activity>
         <activity
-            android:name=".ui.activities.ShippingActivity"
+            android:name="com.estrategiamovilmx.sales.weespareenvios.ui.activities.ShippingActivity"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
-            android:name=".ui.activities.AddShippingAddressActivity"
+            android:name="com.estrategiamovilmx.sales.weespareenvios.ui.activities.AddShippingAddressActivity"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
 
         <service
-            android:name=".gmaps.GeocodeAddressIntentService"
+            android:name="com.estrategiamovilmx.sales.weespareenvios.gmaps.GeocodeAddressIntentService"
             android:exported="false" />
 
         <activity
-            android:name=".ui.activities.SelectShippingPointActivity"
+            android:name="com.estrategiamovilmx.sales.weespareenvios.ui.activities.SelectShippingPointActivity"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="adjustResize|stateVisible" >
         </activity>
         <activity
-            android:name=".ui.activities.ContactActivity"
+            android:name="com.estrategiamovilmx.sales.weespareenvios.ui.activities.ContactActivity"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
-            android:name=".ui.activities.AddContactActivity"
+            android:name="com.estrategiamovilmx.sales.weespareenvios.ui.activities.AddContactActivity"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
-            android:name=".ui.activities.PaymentMethodActivity"
+            android:name="com.estrategiamovilmx.sales.weespareenvios.ui.activities.PaymentMethodActivity"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
-            android:name=".ui.activities.ReviewActivity"
+            android:name="com.estrategiamovilmx.sales.weespareenvios.ui.activities.ReviewActivity"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
-            android:name=".ui.activities.CongratsActivity"
+            android:name="com.estrategiamovilmx.sales.weespareenvios.ui.activities.CongratsActivity"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
-            android:name=".ui.activities.ShoppingCartActivity"
+            android:name="com.estrategiamovilmx.sales.weespareenvios.ui.activities.ShoppingCartActivity"
             android:label="@string/title_activity_shopping_cart"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
-            android:name=".ui.activities.OrdersActivity"
+            android:name="com.estrategiamovilmx.sales.weespareenvios.ui.activities.OrdersActivity"
             android:label="@string/title_activity_orders_client"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
-            android:name=".ui.activities.LoginActivity"
+            android:name="com.estrategiamovilmx.sales.weespareenvios.ui.activities.LoginActivity"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
-            android:name=".ui.activities.LocationActivity"
+            android:name="com.estrategiamovilmx.sales.weespareenvios.ui.activities.LocationActivity"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
-        <activity android:name=".ui.activities.SignOutActivity" >
+        <activity android:name="com.estrategiamovilmx.sales.weespareenvios.ui.activities.SignOutActivity" >
         </activity>
         <activity
-            android:name=".ui.activities.ProfileActivity"
+            android:name="com.estrategiamovilmx.sales.weespareenvios.ui.activities.ProfileActivity"
             android:label="@string/title_activity_profile"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
-            android:name=".ui.activities.ChangePasswordActivity"
+            android:name="com.estrategiamovilmx.sales.weespareenvios.ui.activities.ChangePasswordActivity"
             android:label="@string/prompt_password_change_title"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
-            android:name=".ui.activities.OrderDetailActivity"
+            android:name="com.estrategiamovilmx.sales.weespareenvios.ui.activities.OrderDetailActivity"
             android:label="@string/promt_title_activity_detail_order"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
-            android:name=".ui.activities.OrdersDeliverActivity"
+            android:name="com.estrategiamovilmx.sales.weespareenvios.ui.activities.OrdersDeliverActivity"
             android:label="@string/action_shipping"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <!-- [START firebase_service] -->
-        <service android:name=".notifications.MyFirebaseMessagingService" >
+        <service android:name="com.estrategiamovilmx.sales.weespareenvios.notifications.MyFirebaseMessagingService" >
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
         <!-- [END firebase_service] -->
         <!-- [START firebase_iid_service] -->
-        <service android:name=".notifications.MyFirebaseInstanceIDService" >
+        <service android:name="com.estrategiamovilmx.sales.weespareenvios.notifications.MyFirebaseInstanceIDService" >
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
         <!-- [END firebase_iid_service] -->
-        <activity android:name=".ui.activities.FCMPluginActivity" />
-        <activity android:name=".ui.activities.ReplyActivity" >
+        <activity android:name="com.estrategiamovilmx.sales.weespareenvios.ui.activities.FCMPluginActivity" />
+        <activity android:name="com.estrategiamovilmx.sales.weespareenvios.ui.activities.ReplyActivity" >
         </activity>
-        <activity android:name=".ui.activities.SubscriptionActivity" >
+        <activity android:name="com.estrategiamovilmx.sales.weespareenvios.ui.activities.SubscriptionActivity" >
         </activity>
         <activity
-            android:name=".ui.activities.MapsActivity"
+            android:name="com.estrategiamovilmx.sales.weespareenvios.ui.activities.MapsActivity"
             android:label="@string/title_activity_maps" >
         </activity>
         <activity
-            android:name=".ui.activities.NewOrderActivity"
+            android:name="com.estrategiamovilmx.sales.weespareenvios.ui.activities.NewOrderActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="adjustResize|stateHidden" >
         </activity>
         <activity
-            android:name=".ui.activities.BudgetActivity"
+            android:name="com.estrategiamovilmx.sales.weespareenvios.ui.activities.BudgetActivity"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
-            android:name=".ui.activities.SignatureActivity"
+            android:name="com.estrategiamovilmx.sales.weespareenvios.ui.activities.SignatureActivity"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
-        <activity android:name=".ui.activities.ManageLocationsActivity"
+        <activity android:name="com.estrategiamovilmx.sales.weespareenvios.ui.activities.ManageLocationsActivity"
             android:theme="@style/AppTheme.NoActionBar"
             android:label="@string/title_fav">
         </activity>

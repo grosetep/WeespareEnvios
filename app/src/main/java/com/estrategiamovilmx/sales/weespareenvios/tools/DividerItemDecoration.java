@@ -8,9 +8,6 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * Created by administrator on 10/07/2017.
  */

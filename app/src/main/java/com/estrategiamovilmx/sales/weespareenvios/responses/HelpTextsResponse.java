@@ -1,6 +1,5 @@
 package com.estrategiamovilmx.sales.weespareenvios.responses;
 
-import com.estrategiamovilmx.sales.weespareenvios.items.CartProductItem;
 import com.estrategiamovilmx.sales.weespareenvios.items.HelpText;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

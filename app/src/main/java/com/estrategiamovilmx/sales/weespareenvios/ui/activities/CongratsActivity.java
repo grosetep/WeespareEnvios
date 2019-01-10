@@ -16,10 +16,7 @@ import android.widget.TextView;
 
 import android.Manifest;
 import com.estrategiamovilmx.sales.weespareenvios.R;
-import com.estrategiamovilmx.sales.weespareenvios.items.BudgetResult;
 import com.estrategiamovilmx.sales.weespareenvios.items.ConfigItem;
-import com.estrategiamovilmx.sales.weespareenvios.model.OrderShipping;
-import com.estrategiamovilmx.sales.weespareenvios.model.ShippingAddress;
 import com.estrategiamovilmx.sales.weespareenvios.requests.ShippingOrderRequest;
 import com.estrategiamovilmx.sales.weespareenvios.tools.ApplicationPreferences;
 import com.estrategiamovilmx.sales.weespareenvios.tools.Constants;

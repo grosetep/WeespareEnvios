@@ -1,8 +1,5 @@
 package com.estrategiamovilmx.sales.weespareenvios.model;
 
-import com.estrategiamovilmx.sales.weespareenvios.tools.Constants;
-import com.google.gson.annotations.SerializedName;
-
 import java.io.Serializable;
 
 /**

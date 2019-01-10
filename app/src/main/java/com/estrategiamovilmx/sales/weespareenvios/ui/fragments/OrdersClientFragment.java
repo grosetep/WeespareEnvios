@@ -18,10 +18,8 @@ import com.estrategiamovilmx.sales.weespareenvios.R;
 import com.estrategiamovilmx.sales.weespareenvios.items.UserItem;
 import com.estrategiamovilmx.sales.weespareenvios.tools.Constants;
 import com.estrategiamovilmx.sales.weespareenvios.tools.GeneralFunctions;
-import com.estrategiamovilmx.sales.weespareenvios.ui.activities.AddShippingAddressActivity;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 /**

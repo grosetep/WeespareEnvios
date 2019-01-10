@@ -1,24 +1,14 @@
 package com.estrategiamovilmx.sales.weespareenvios.ui.adapters;
 
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
 import com.estrategiamovilmx.sales.weespareenvios.R;
-import com.estrategiamovilmx.sales.weespareenvios.items.CartProductItem;
 import com.estrategiamovilmx.sales.weespareenvios.model.PickupAddress;
-import com.estrategiamovilmx.sales.weespareenvios.tools.Constants;
-import com.estrategiamovilmx.sales.weespareenvios.tools.StringOperations;
 import com.estrategiamovilmx.sales.weespareenvios.ui.activities.BudgetActivity;
-import com.estrategiamovilmx.sales.weespareenvios.ui.activities.ShoppingCartActivity;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;

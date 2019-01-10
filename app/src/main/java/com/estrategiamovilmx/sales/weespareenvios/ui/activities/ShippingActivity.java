@@ -26,7 +26,6 @@ import com.estrategiamovilmx.sales.weespareenvios.tools.Connectivity;
 import com.estrategiamovilmx.sales.weespareenvios.tools.Constants;
 import com.estrategiamovilmx.sales.weespareenvios.tools.GeneralFunctions;
 import com.estrategiamovilmx.sales.weespareenvios.tools.ShowConfirmations;
-import com.estrategiamovilmx.sales.weespareenvios.ui.adapters.DestinationAddressAdapter;
 import com.estrategiamovilmx.sales.weespareenvios.ui.adapters.ShippingAddressAdapter;
 
 import java.util.ArrayList;

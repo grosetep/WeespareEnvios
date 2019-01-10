@@ -33,8 +33,6 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.estrategiamovilmx.sales.weespareenvios.items.RateItem;
-import com.estrategiamovilmx.sales.weespareenvios.tools.ApplicationPreferences;
 import com.estrategiamovilmx.sales.weespareenvios.ui.activities.ManageLocationsActivity;
 import com.estrategiamovilmx.sales.weespareenvios.R;
 import com.estrategiamovilmx.sales.weespareenvios.model.ShippingAddress;
@@ -44,12 +42,10 @@ import com.estrategiamovilmx.sales.weespareenvios.tools.ShowConfirmations;
 import com.estrategiamovilmx.sales.weespareenvios.ui.activities.AddShippingAddressActivity;
 import com.estrategiamovilmx.sales.weespareenvios.ui.activities.NewOrderActivity;
 import com.estrategiamovilmx.sales.weespareenvios.ui.adapters.DestinationAddressAdapter;
-import com.google.gson.Gson;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.

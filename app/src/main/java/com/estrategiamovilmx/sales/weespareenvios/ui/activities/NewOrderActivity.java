@@ -19,28 +19,20 @@ import android.view.View;
 import android.widget.RelativeLayout;
 
 import com.estrategiamovilmx.sales.weespareenvios.R;
-import com.estrategiamovilmx.sales.weespareenvios.items.UserItem;
 import com.estrategiamovilmx.sales.weespareenvios.model.ElementChanged;
 import com.estrategiamovilmx.sales.weespareenvios.model.OrderShipping;
 import com.estrategiamovilmx.sales.weespareenvios.model.PackageDetail;
 import com.estrategiamovilmx.sales.weespareenvios.model.PickupAddress;
-import com.estrategiamovilmx.sales.weespareenvios.model.ShippingAddress;
 import com.estrategiamovilmx.sales.weespareenvios.requests.ShippingBudgetRequest;
 import com.estrategiamovilmx.sales.weespareenvios.requests.ShippingOrderRequest;
 import com.estrategiamovilmx.sales.weespareenvios.responses.BudgetResponse;
-import com.estrategiamovilmx.sales.weespareenvios.responses.GenericResponse;
 import com.estrategiamovilmx.sales.weespareenvios.retrofit.RestServiceWrapper;
-import com.estrategiamovilmx.sales.weespareenvios.tools.ApplicationPreferences;
 import com.estrategiamovilmx.sales.weespareenvios.tools.Constants;
 import com.estrategiamovilmx.sales.weespareenvios.tools.GeneralFunctions;
 import com.estrategiamovilmx.sales.weespareenvios.tools.ShowConfirmations;
 import com.estrategiamovilmx.sales.weespareenvios.ui.fragments.DatePickerFragment;
 import com.estrategiamovilmx.sales.weespareenvios.ui.fragments.DetailOrderFragment;
 import com.estrategiamovilmx.sales.weespareenvios.ui.fragments.PickupPointFragment;
-import com.google.android.gms.location.places.Place;
-import com.google.android.gms.location.places.ui.PlacePicker;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.gson.Gson;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -49,9 +41,6 @@ import java.util.Calendar;
 import java.util.Collections;
 import java.util.Date;
 import java.util.List;
-import java.util.ListIterator;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import retrofit2.Call;
 import retrofit2.Callback;

@@ -26,7 +26,6 @@ import com.estrategiamovilmx.sales.weespareenvios.R;
 import com.estrategiamovilmx.sales.weespareenvios.items.OrderDetail;
 import com.estrategiamovilmx.sales.weespareenvios.items.OrderItem;
 import com.estrategiamovilmx.sales.weespareenvios.items.UserItem;
-import com.estrategiamovilmx.sales.weespareenvios.model.DestinyBriefView;
 import com.estrategiamovilmx.sales.weespareenvios.model.DestinyView;
 import com.estrategiamovilmx.sales.weespareenvios.responses.OrderDetailResponse;
 import com.estrategiamovilmx.sales.weespareenvios.retrofit.RestServiceWrapper;

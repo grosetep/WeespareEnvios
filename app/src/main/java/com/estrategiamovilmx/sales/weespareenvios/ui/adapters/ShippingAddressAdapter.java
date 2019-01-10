@@ -1,9 +1,6 @@
 package com.estrategiamovilmx.sales.weespareenvios.ui.adapters;
 
-import android.app.Activity;
-import android.content.Context;
 import android.graphics.Color;
-import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -17,9 +14,7 @@ import android.widget.TextView;
 import com.estrategiamovilmx.sales.weespareenvios.R;
 import com.estrategiamovilmx.sales.weespareenvios.model.ShippingAddress;
 import com.estrategiamovilmx.sales.weespareenvios.tools.Constants;
-import com.estrategiamovilmx.sales.weespareenvios.ui.activities.NewOrderActivity;
 import com.estrategiamovilmx.sales.weespareenvios.ui.activities.ShippingActivity;
-import com.estrategiamovilmx.sales.weespareenvios.ui.fragments.PickupPointFragment;
 
 import java.util.ArrayList;
 import java.util.List;

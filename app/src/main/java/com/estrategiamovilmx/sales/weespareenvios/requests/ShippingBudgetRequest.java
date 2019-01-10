@@ -1,10 +1,6 @@
 package com.estrategiamovilmx.sales.weespareenvios.requests;
 
-import com.estrategiamovilmx.sales.weespareenvios.items.BudgetResult;
-import com.estrategiamovilmx.sales.weespareenvios.items.UserItem;
-import com.estrategiamovilmx.sales.weespareenvios.model.Contact;
 import com.estrategiamovilmx.sales.weespareenvios.model.OrderShipping;
-import com.estrategiamovilmx.sales.weespareenvios.model.ShippingAddress;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;

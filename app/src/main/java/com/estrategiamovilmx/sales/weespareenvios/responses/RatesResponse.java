@@ -1,12 +1,10 @@
 package com.estrategiamovilmx.sales.weespareenvios.responses;
 
 import com.estrategiamovilmx.sales.weespareenvios.items.FactorItem;
-import com.estrategiamovilmx.sales.weespareenvios.items.RateItem;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
-import java.util.List;
 
 public class RatesResponse implements Serializable {
     @SerializedName("status")

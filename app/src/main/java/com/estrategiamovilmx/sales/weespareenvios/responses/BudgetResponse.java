@@ -1,7 +1,6 @@
 package com.estrategiamovilmx.sales.weespareenvios.responses;
 
 import com.estrategiamovilmx.sales.weespareenvios.items.BudgetResult;
-import com.estrategiamovilmx.sales.weespareenvios.items.UserItem;
 
 import java.io.Serializable;
 

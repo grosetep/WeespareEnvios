@@ -25,25 +25,14 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
 import com.estrategiamovilmx.sales.weespareenvios.R;
-import com.estrategiamovilmx.sales.weespareenvios.items.OrderOnList;
-import com.estrategiamovilmx.sales.weespareenvios.items.UserItem;
-import com.estrategiamovilmx.sales.weespareenvios.tools.ApplicationPreferences;
-import com.estrategiamovilmx.sales.weespareenvios.tools.Constants;
-import com.estrategiamovilmx.sales.weespareenvios.tools.GeneralFunctions;
-import com.estrategiamovilmx.sales.weespareenvios.tools.ShowConfirmations;
-import com.estrategiamovilmx.sales.weespareenvios.tools.UploadImage;
 import com.estrategiamovilmx.sales.weespareenvios.ui.fragments.PendingOrdersFragment;
-import com.google.gson.Gson;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
-import java.util.Timer;
-import java.util.TimerTask;
 
 public class SignatureActivity extends AppCompatActivity {
     private final String TAG ="SignatureActivity";

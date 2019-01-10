@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.CardView;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.util.Log;
@@ -14,20 +13,16 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.estrategiamovilmx.sales.weespareenvios.R;
-import com.estrategiamovilmx.sales.weespareenvios.model.PublicationCardViewModel;
 import com.estrategiamovilmx.sales.weespareenvios.model.ShippingServiceModel;
 import com.estrategiamovilmx.sales.weespareenvios.tools.ApplicationPreferences;
 import com.estrategiamovilmx.sales.weespareenvios.tools.Constants;
 import com.estrategiamovilmx.sales.weespareenvios.ui.activities.LoginActivity;
 import com.estrategiamovilmx.sales.weespareenvios.ui.activities.MainActivity;
 import com.estrategiamovilmx.sales.weespareenvios.ui.activities.NewOrderActivity;
-import com.estrategiamovilmx.sales.weespareenvios.ui.adapters.OfferAdapter;
 import com.estrategiamovilmx.sales.weespareenvios.ui.adapters.PublicationAdapter;
-import com.estrategiamovilmx.sales.weespareenvios.ui.interfaces.OnLoadMoreListener;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
 
 /**
  * A simple {@link Fragment} subclass.

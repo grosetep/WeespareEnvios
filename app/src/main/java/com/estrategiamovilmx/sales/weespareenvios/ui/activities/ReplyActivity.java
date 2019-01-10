@@ -8,7 +8,6 @@ import android.util.Log;
 
 import com.estrategiamovilmx.sales.weespareenvios.items.UserItem;
 import com.estrategiamovilmx.sales.weespareenvios.notifications.MyFirebaseMessagingService;
-import com.estrategiamovilmx.sales.weespareenvios.tools.Constants;
 
 public class ReplyActivity extends AppCompatActivity {
     public static final String flow_notification = "notification";

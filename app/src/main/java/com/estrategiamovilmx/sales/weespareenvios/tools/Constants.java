@@ -11,17 +11,18 @@ public class Constants {
     public static final String IP = "www.estrategiamovilmx.com";
     public static final String HTTPS = "https://";
     public static final String HTTP = "http://";
-    public static final String SUBDOMAIN = "/weespareenvios/services/services.php/";
+    public static final String ROOT_SUBDOMAIN = "/domiciliosqa";
+    public static final String SUBDOMAIN = ROOT_SUBDOMAIN + "/services/services.php/";
     public static final String MENBERS_DOMAIN_REST =Constants.HTTP + Constants.IP + Constants.PUERTO_HOST + "/members/services/services.php/";//usar https
     public static final String RETROFIT_SERVICE_REST = Constants.HTTP + Constants.IP + Constants.PUERTO_HOST + Constants.SUBDOMAIN;//usar https
     /**
      * URLs del Web Service
      */
     /*Publications*/
-    public static final String GET_PRODUCTS = HTTP + IP + PUERTO_HOST + "/weespareenvios/services/getProducts.php";//usar https
+    public static final String GET_PRODUCTS = HTTP + IP + PUERTO_HOST + ROOT_SUBDOMAIN + "/services/getProducts.php";//usar https
     /* Upload images*/
-    public static final String UPLOAD_IMAGE = HTTP + IP + PUERTO_HOST + "/weespareenvios/services/uploadImage.php";
-    public static final String UPLOAD_IMAGE_SIGNATURE = HTTP + IP + PUERTO_HOST + "/weespareenvios/services/uploadImageSignature.php";
+    public static final String UPLOAD_IMAGE = HTTP + IP + PUERTO_HOST + ROOT_SUBDOMAIN + "/services/uploadImage.php";
+    public static final String UPLOAD_IMAGE_SIGNATURE = HTTP + IP + PUERTO_HOST + ROOT_SUBDOMAIN +"/services/uploadImageSignature.php";
     public static final Integer DURATION = 1000;
 
     public static final String GALLERY = "gallery";

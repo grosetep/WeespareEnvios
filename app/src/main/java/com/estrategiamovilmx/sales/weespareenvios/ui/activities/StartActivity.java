@@ -9,8 +9,6 @@ import android.util.Log;
 import com.estrategiamovilmx.sales.weespareenvios.R;
 import com.estrategiamovilmx.sales.weespareenvios.items.ConfigItem;
 import com.estrategiamovilmx.sales.weespareenvios.items.FactorItem;
-import com.estrategiamovilmx.sales.weespareenvios.items.HelpText;
-import com.estrategiamovilmx.sales.weespareenvios.items.RateItem;
 import com.estrategiamovilmx.sales.weespareenvios.responses.ConfigurationResponse;
 import com.estrategiamovilmx.sales.weespareenvios.responses.HelpTextsResponse;
 import com.estrategiamovilmx.sales.weespareenvios.responses.RatesResponse;
@@ -24,7 +22,6 @@ import com.estrategiamovilmx.sales.weespareenvios.ui.interfaces.DialogCallbackIn
 import com.google.gson.Gson;
 
 import java.util.Calendar;
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
