@@ -16,6 +16,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 import com.estrategiamovilmx.sales.weespareenvios.R;
+import com.estrategiamovilmx.sales.weespareenvios.items.MerchantItem;
 import com.estrategiamovilmx.sales.weespareenvios.items.UserItem;
 import com.estrategiamovilmx.sales.weespareenvios.model.ApiException;
 import com.estrategiamovilmx.sales.weespareenvios.model.ShippingAddress;
@@ -211,7 +212,7 @@ public class ShippingActivity extends AppCompatActivity {
                     if (getAddress_position_selected()!=-1) {//ya hay uno seleccionado
                         resetElement(getAddress_position_selected());
                     }
-                   //Reset de todos los elementos existentes a..no seleccionados
+                    //Reset de todos los elementos existentes a..no seleccionados
                     resetElementsNotSelected();
                     //create element on list
                     mAdapter.addItem(0,ship);

@@ -21,8 +21,8 @@ public class StringOperations {
         value = original.substring(0,index);
         return value;
     }
-    public static String getAmountFormat(String amount){
-        int pais = 52;
+    /*public static String getAmountFormat(String amount,int pais){
+
         NumberFormat format = null;
         if (amount!=null && amount != "") {
             switch (pais) {
@@ -35,11 +35,11 @@ public class StringOperations {
         }else{
             return null;
         }
-    }
-    public static String getAmountFormat(String amount,Context ctx){
+    }*/
+    public static String getAmountFormat(String amount,String id_country){
         int pais = 0;
 
-        String id_country = ApplicationPreferences.getLocalStringPreference(ctx, Constants.id_country);
+        //String id_country = ApplicationPreferences.getLocalStringPreference(ctx, Constants.id_country);
         if (id_country.isEmpty()) {
             pais = 52;
         }else{pais = Integer.parseInt(id_country);}

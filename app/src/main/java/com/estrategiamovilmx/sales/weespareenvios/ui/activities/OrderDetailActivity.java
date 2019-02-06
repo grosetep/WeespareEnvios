@@ -29,6 +29,7 @@ import com.estrategiamovilmx.sales.weespareenvios.items.UserItem;
 import com.estrategiamovilmx.sales.weespareenvios.model.DestinyView;
 import com.estrategiamovilmx.sales.weespareenvios.responses.OrderDetailResponse;
 import com.estrategiamovilmx.sales.weespareenvios.retrofit.RestServiceWrapper;
+import com.estrategiamovilmx.sales.weespareenvios.tools.ApplicationPreferences;
 import com.estrategiamovilmx.sales.weespareenvios.tools.Connectivity;
 import com.estrategiamovilmx.sales.weespareenvios.tools.Constants;
 import com.estrategiamovilmx.sales.weespareenvios.tools.GeneralFunctions;
@@ -247,6 +248,7 @@ public class OrderDetailActivity extends AppCompatActivity {
         return list_ordered;
     }
     private void setDetailedValues(OrderItem order, UserItem user, OrderDetail detail) {
+        String id_country = ApplicationPreferences.getLocalStringPreference(OrderDetailActivity.this, Constants.id_country);
         StringBuffer buffer = new StringBuffer();
         if (order != null) {
             //Log.d(TAG, "Generando lista de direcciones con detalles:" + detail.getDestinations());
@@ -258,10 +260,10 @@ public class OrderDetailActivity extends AppCompatActivity {
             text_email_view.setText(detail.getEmail());
             if (user.getProfile().equals(Constants.profile_deliver_man)) {
                 title_total.setText(getString(R.string.title_total_commission));
-                text_total.setText(StringOperations.getAmountFormat(order.getDeliverman_commision()));
+                text_total.setText(StringOperations.getAmountFormat(order.getDeliverman_commision(),id_country));
             } else {
                 title_total.setText(getString(R.string.title_conf_total));
-                text_total.setText(StringOperations.getAmountFormat(order.getTotal()));
+                text_total.setText(StringOperations.getAmountFormat(order.getTotal(),id_country));
             }
             //llenar campos del detalle
             text_hour.setText(detail.getHourCreation());

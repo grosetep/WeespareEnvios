@@ -24,6 +24,7 @@ import com.estrategiamovilmx.sales.weespareenvios.R;
 import com.estrategiamovilmx.sales.weespareenvios.items.OrderItem;
 import com.estrategiamovilmx.sales.weespareenvios.items.UserItem;
 import com.estrategiamovilmx.sales.weespareenvios.model.DestinyBriefView;
+import com.estrategiamovilmx.sales.weespareenvios.tools.ApplicationPreferences;
 import com.estrategiamovilmx.sales.weespareenvios.tools.Constants;
 import com.estrategiamovilmx.sales.weespareenvios.tools.GeneralFunctions;
 import com.estrategiamovilmx.sales.weespareenvios.tools.StringOperations;
@@ -43,7 +44,7 @@ public class PendingOrdersAdapter extends RecyclerView.Adapter<RecyclerView.View
     private ArrayList<OrderItem> list;
     private UserItem current_user;
     private HashMap<String,DestinyBriefView> destinationsList;
-    //
+    private String id_country = "";
     //
     private OnLoadMoreListener mOnLoadMoreListener;
     private RecyclerView.OnScrollListener listener;
@@ -62,6 +63,7 @@ public class PendingOrdersAdapter extends RecyclerView.Adapter<RecyclerView.View
         this.fragment = fragment;
         recyclerview = recycler;
         destinationsList = new HashMap<>();
+        id_country = ApplicationPreferences.getLocalStringPreference(activity, Constants.id_country);
     //
     final LinearLayoutManager linearLayoutManager = (LinearLayoutManager) recyclerview.getLayoutManager();
     listener = new RecyclerView.OnScrollListener() {
@@ -325,9 +327,9 @@ public class ViewHolder extends RecyclerView.ViewHolder {
         text_num_order.setText(activity.getString(R.string.promt_num_order, model.getIdOrder()));
         //total amount or commission based on user profile
         if (current_user.getProfile().equals(Constants.profile_deliver_man)) {
-            text_total.setText(StringOperations.getAmountFormat(model.getDeliverman_commision()));
+            text_total.setText(StringOperations.getAmountFormat(model.getDeliverman_commision(),id_country));
         }else{
-            text_total.setText(StringOperations.getAmountFormat(model.getTotal()));
+            text_total.setText(StringOperations.getAmountFormat(model.getTotal(),id_country));
         }
         //delivery fields
         //si hay valor en originalDestinations entonces ponerlo y sino poner totalDestinarions

@@ -84,7 +84,7 @@ public class StartActivity extends AppCompatActivity implements DialogCallbackIn
     }
     private void getHelpTexts(){
         String id_country = ApplicationPreferences.getLocalStringPreference(getApplicationContext(), Constants.id_country);
-        id_country = "173";
+        id_country = "52";
         RestServiceWrapper.getHelpTexts(id_country,new Callback<HelpTextsResponse>() {
             @Override
             public void onResponse(Call<HelpTextsResponse> call, retrofit2.Response<HelpTextsResponse> response) {
@@ -97,7 +97,6 @@ public class StartActivity extends AppCompatActivity implements DialogCallbackIn
                         if (config_response.getResult() != null && config_response.getStatus().equals(Constants.success)) {
                             Gson gson = new Gson();
                             ApplicationPreferences.saveLocalPreference(getApplicationContext(), Constants.help_texts_list, gson.toJson(config_response.getResult()));
-                            Log.d(TAG, "Textos ayuda");
                             Log.d(TAG,ApplicationPreferences.getLocalStringPreference(getApplicationContext(),Constants.help_texts_list));
                             init();
                         } else {
@@ -131,6 +130,7 @@ public class StartActivity extends AppCompatActivity implements DialogCallbackIn
     private void getInitialRate(){
         final Gson gson = new Gson();
         String id_country = ApplicationPreferences.getLocalStringPreference(getApplicationContext(), Constants.id_country);
+        ApplicationPreferences.saveLocalPreference(getApplicationContext(),Constants.id_country,"52");
         id_country = "52";
         RestServiceWrapper.getInitialRate(id_country, new Callback<RatesResponse>() {
             @Override

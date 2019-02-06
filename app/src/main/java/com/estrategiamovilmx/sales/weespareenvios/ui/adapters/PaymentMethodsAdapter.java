@@ -12,6 +12,9 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.estrategiamovilmx.sales.weespareenvios.R;
 import com.estrategiamovilmx.sales.weespareenvios.model.PaymentMethod;
+import com.estrategiamovilmx.sales.weespareenvios.tools.ApplicationPreferences;
+import com.estrategiamovilmx.sales.weespareenvios.tools.Constants;
+import com.estrategiamovilmx.sales.weespareenvios.tools.StringOperations;
 import com.estrategiamovilmx.sales.weespareenvios.ui.activities.PaymentMethodActivity;
 
 import java.util.ArrayList;
@@ -23,11 +26,15 @@ import java.util.List;
 public class PaymentMethodsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private PaymentMethodActivity activity;
     private ArrayList<PaymentMethod> list;
+    private Float total_amount;
     private static final String TAG = PaymentMethodsAdapter.class.getSimpleName();
+    private String id_country;
 
-    public PaymentMethodsAdapter(PaymentMethodActivity act, ArrayList<PaymentMethod> myDataset) {
+    public PaymentMethodsAdapter(PaymentMethodActivity act, ArrayList<PaymentMethod> myDataset,Float total) {
         list = myDataset;
         activity=act;
+        total_amount = total;
+        id_country = ApplicationPreferences.getLocalStringPreference(activity, Constants.id_country);
     }
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent,
@@ -41,24 +48,27 @@ public class PaymentMethodsAdapter extends RecyclerView.Adapter<RecyclerView.Vie
         private ImageView image_on_delivery;
         private TextView text_method_title;
         private TextView text_description;
+        private TextView text_extra_info;
         private RelativeLayout layout_over;
 
         public ViewHolder(View v) {
             super(v);
             text_description = (TextView) v.findViewById(R.id.text_description);
             text_method_title = (TextView) v.findViewById(R.id.text_method_title);
+            text_extra_info = (TextView) v.findViewById(R.id.text_extra_info);
             image_on_delivery = (ImageView) v.findViewById(R.id.image_on_delivery);
             layout_over = (RelativeLayout) v.findViewById(R.id.layout_over);
         }
         public void bind(PaymentMethod model) {
-            Log.d(TAG,"isSelected:"+model.isSelected() );
+
             text_method_title.setText(model.getMethod());
             text_description.setText(model.getDescription());
+            text_extra_info.setText(model.getMoneyBack()!=null && !model.getMoneyBack().isEmpty()?activity.getString(R.string.promt_money_back_data, StringOperations.getAmountFormat(model.getMoneyBack(),id_country)):"");
             Glide.with(activity.getApplicationContext())
                     .load(model.getImage())
                     .into(image_on_delivery);
 
-            layout_over.setVisibility(model.isSelected()?View.VISIBLE:View.GONE);
+            layout_over.setVisibility(model.isSelected()? View.VISIBLE: View.GONE);
         }
     }
     @Override
@@ -75,6 +85,10 @@ public class PaymentMethodsAdapter extends RecyclerView.Adapter<RecyclerView.Vie
                     //reset old element selected
                     activity.resetElement(activity.getMethod_position_selected());
                     activity.setMethodSelected(position);
+
+                    if (method.getIdPaymentMethod().equals(String.valueOf(Constants.CASH))){
+                        activity.moneyBack_Popup(position,total_amount);
+                    }
                 }
             });
 

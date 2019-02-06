@@ -1,6 +1,7 @@
 package com.estrategiamovilmx.sales.weespareenvios.requests;
 
 import com.estrategiamovilmx.sales.weespareenvios.model.Contact;
+import com.estrategiamovilmx.sales.weespareenvios.model.PaymentMethod;
 import com.estrategiamovilmx.sales.weespareenvios.model.ShippingAddress;
 import com.google.gson.annotations.SerializedName;
 
@@ -14,10 +15,12 @@ public class CreateOrderRequest implements Serializable{
     private String id_order;
     @SerializedName("id_user")
     private String id_user;
+    @SerializedName("id_merchant")
+    private int id_merchant;
     @SerializedName("id_cart")
     private String id_cart;
-    @SerializedName("id_payment_method")
-    private String id_payment_method;
+    @SerializedName("payment_method")
+    private PaymentMethod payment_method;
     @SerializedName("total")
     private String total;
     @SerializedName("shipping")
@@ -32,6 +35,7 @@ public class CreateOrderRequest implements Serializable{
     private String amountFormatTotal;
     @SerializedName("token")
     private String token;
+
 
     public String getId_order() {
         return id_order;
@@ -57,12 +61,12 @@ public class CreateOrderRequest implements Serializable{
         this.id_cart = id_cart;
     }
 
-    public String getId_payment_method() {
-        return id_payment_method;
+    public PaymentMethod getPayment_method() {
+        return payment_method;
     }
 
-    public void setId_payment_method(String id_payment_method) {
-        this.id_payment_method = id_payment_method;
+    public void setPayment_method(PaymentMethod payment_method) {
+        this.payment_method = payment_method;
     }
 
     public String getTotal() {
@@ -121,13 +125,22 @@ public class CreateOrderRequest implements Serializable{
         this.token = token;
     }
 
+    public int getId_merchant() {
+        return id_merchant;
+    }
+
+    public void setId_merchant(int id_merchant) {
+        this.id_merchant = id_merchant;
+    }
+
     @Override
     public String toString() {
         return "CreateOrderRequest{" +
                 "id_order='" + id_order + '\'' +
                 ", id_user='" + id_user + '\'' +
+                ", id_merchant='" + id_merchant + '\'' +
                 ", id_cart='" + id_cart + '\'' +
-                ", id_payment_method='" + id_payment_method + '\'' +
+                ", payment_method=" + payment_method +
                 ", total='" + total + '\'' +
                 ", shipping=" + shipping +
                 ", contact=" + contact +

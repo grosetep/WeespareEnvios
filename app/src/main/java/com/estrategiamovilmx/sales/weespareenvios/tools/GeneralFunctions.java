@@ -11,6 +11,7 @@ import android.text.Spanned;
 import android.util.Log;
 
 import com.estrategiamovilmx.sales.weespareenvios.items.ConfigItem;
+import com.estrategiamovilmx.sales.weespareenvios.items.MerchantItem;
 import com.estrategiamovilmx.sales.weespareenvios.items.OrderItem;
 import com.estrategiamovilmx.sales.weespareenvios.items.UserItem;
 import com.estrategiamovilmx.sales.weespareenvios.model.ElementChanged;
@@ -36,7 +37,14 @@ public class GeneralFunctions {
         }
         return new_publications;
     }
-
+    public static ArrayList<MerchantItem> FilterMerchants(ArrayList<MerchantItem> publications, ArrayList<MerchantItem> new_publications){
+        Iterator<MerchantItem> iter = new_publications.iterator();
+        while (iter.hasNext()){
+            MerchantItem p = iter.next();
+            if (publications.contains(p)){ iter.remove();}
+        }
+        return new_publications;
+    }
     public static UserItem getCurrentUser(Context context){
         Gson gson = new Gson();
         UserItem user = null;

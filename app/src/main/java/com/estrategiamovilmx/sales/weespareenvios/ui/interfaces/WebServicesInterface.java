@@ -1,5 +1,6 @@
 package com.estrategiamovilmx.sales.weespareenvios.ui.interfaces;
 
+import com.estrategiamovilmx.sales.weespareenvios.requests.AddProductRequest;
 import com.estrategiamovilmx.sales.weespareenvios.requests.CartRequest;
 import com.estrategiamovilmx.sales.weespareenvios.requests.ChangeStatusOrderRequest;
 import com.estrategiamovilmx.sales.weespareenvios.requests.CreateOrderRequest;
@@ -10,6 +11,8 @@ import com.estrategiamovilmx.sales.weespareenvios.requests.UpdateLocationRequest
 import com.estrategiamovilmx.sales.weespareenvios.requests.UserOperationRequest;
 import com.estrategiamovilmx.sales.weespareenvios.requests.UpdateShoppingCartRequest;
 import com.estrategiamovilmx.sales.weespareenvios.responses.BudgetResponse;
+import com.estrategiamovilmx.sales.weespareenvios.responses.CategoryResponse;
+import com.estrategiamovilmx.sales.weespareenvios.responses.ClassificationsResponse;
 import com.estrategiamovilmx.sales.weespareenvios.responses.ConfigurationResponse;
 import com.estrategiamovilmx.sales.weespareenvios.responses.CreateOrderResponse;
 import com.estrategiamovilmx.sales.weespareenvios.responses.GenericResponse;
@@ -19,7 +22,9 @@ import com.estrategiamovilmx.sales.weespareenvios.responses.GetOrdersResponse;
 import com.estrategiamovilmx.sales.weespareenvios.responses.GetPaymentMethodResponse;
 import com.estrategiamovilmx.sales.weespareenvios.responses.GetProductsResponse;
 import com.estrategiamovilmx.sales.weespareenvios.responses.GetShippingAddressResponse;
+import com.estrategiamovilmx.sales.weespareenvios.responses.GetVariantAdditionalResponse;
 import com.estrategiamovilmx.sales.weespareenvios.responses.HelpTextsResponse;
+import com.estrategiamovilmx.sales.weespareenvios.responses.MerchantsByServiceResponse;
 import com.estrategiamovilmx.sales.weespareenvios.responses.OrderDetailResponse;
 import com.estrategiamovilmx.sales.weespareenvios.responses.RatesResponse;
 import com.estrategiamovilmx.sales.weespareenvios.responses.UserResponse;
@@ -41,7 +46,7 @@ public interface WebServicesInterface {
 
     @GET("getLocationsByUser/{id_user}/{type_query}")
     Call<GetShippingAddressResponse> getLocationsByUser(
-            @Path("id_user") String id_user,@Path("type_query") String type_query);
+            @Path("id_user") String id_user, @Path("type_query") String type_query);
 
     @GET("getContactsByUser/{id_user}")
     Call<GetContactsResponse> getContactsByUser(
@@ -52,7 +57,7 @@ public interface WebServicesInterface {
 
     @Headers({"Content-Type: application/json", "Cache-Control: max-age=640000"})
     @POST("cartOperation")
-    Call<GenericResponse> shoppingCart(@Body CartRequest cart);
+    Call<GenericResponse> shoppingCart(@Body AddProductRequest cart);
 
     @GET("getShoppingCart/{id_user}")
     Call<GetCartResponse> getShoppingCart(
@@ -97,6 +102,9 @@ public interface WebServicesInterface {
     Call<OrderDetailResponse> getDetailOrder(
             @Path("id_order") String id_order);
 
+    @GET("getVariantsAditionals/{id_product}")
+    Call<GetVariantAdditionalResponse> getVariantsXProduct(@Path("id_product") String id_product);
+
     @Headers({"Content-Type: application/json", "Cache-Control: max-age=640000"})
     @POST("budget")
     Call<BudgetResponse> budget( @Body ShippingBudgetRequest request);
@@ -109,10 +117,24 @@ public interface WebServicesInterface {
     @POST("shippingAddressOperation")
     Call<GenericResponse> shippingAddressOperation(@Body UpdateLocationRequest request);
 
+    @GET("getCategories")
+    Call<CategoryResponse> getCategories();
 
     @GET("getInitialRate/{id_country}")
         Call<RatesResponse> getInitialRate( @Path("id_country") String id_country );
 
     @GET("getHelpTexts/{id_country}")
     Call<HelpTextsResponse> getHelpTexts( @Path("id_country") String id_country );
+
+    /*inicio cambios para domicilios*/
+    @GET("getClassificationsByService/{type_service}")
+    Call<ClassificationsResponse> getClassificationsByService( @Path("type_service") String type_service );
+
+    @GET("getMerchantsByService/{type_service}/{classificationKey}/{id_country}/{start}/{end}")
+    Call<MerchantsByServiceResponse> getMerchantsByService( @Path("type_service") String type_service,
+                                                            @Path("classificationKey") String classificationKey,
+                                                            @Path("id_country") String id_country,
+                                                            @Path("start") int start,
+                                                            @Path("end") int end  );
+    /*fin cambios para domicilios*/
 }

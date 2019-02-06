@@ -116,7 +116,7 @@ public class AddContactActivity extends AppCompatActivity {
 
             if (contact.getName()!=null && !contact.getName().isEmpty()){
                 if(contact.getPhone()!=null && !contact.getPhone().isEmpty()){
-                    Log.d(TAG,"Exito en validaciones, regresar a principal y crear nuevo contacto en lista....");
+                    Log.d(TAG, "Exito en validaciones, regresar a principal y crear nuevo contacto en lista....");
                     Intent intent = new Intent();
                     Bundle args = new Bundle();
                     Contact new_contact = getContact();
